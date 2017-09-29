@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D12b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ESSettingController">
+            <connections>
+                <outlet property="btnGeneric" destination="FIE-dA-b1R" id="Ixf-zt-Ngh"/>
+                <outlet property="btnOutputToFile" destination="xTo-NY-de8" id="bJG-th-UpQ"/>
+                <outlet property="btnUpercaseForId" destination="Kcy-UJ-T8e" id="p5c-ca-NWp"/>
+                <outlet property="heiheihie" destination="2rr-eX-CbJ" id="ojg-w2-WgM"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="ESJsonFormat Setting" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="760" y="506" width="475" height="141"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="475" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="FIE-dA-b1R">
+                        <rect key="frame" x="48" y="76" width="225" height="18"/>
+                        <buttonCell key="cell" type="check" title="Use generic for Xcode 7 and later" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Gb8-hX-fES">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="btnUseGenericClick:" target="-2" id="uFu-vm-66K"/>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="xTo-NY-de8">
+                        <rect key="frame" x="48" y="47" width="133" height="18"/>
+                        <buttonCell key="cell" type="check" title="The output to files" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Qcn-Rz-YgD">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="btnOutputToFilesClick:" target="-2" id="RVe-qD-gti"/>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Kcy-UJ-T8e">
+                        <rect key="frame" x="48" y="18" width="188" height="18"/>
+                        <buttonCell key="cell" type="check" title="Uppercase key word for 'id'" bezelStyle="regularSquare" imagePosition="left" inset="2" id="d8z-7B-IM8">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="btnUpercaseKeyWordForIdClick:" target="-2" id="xGN-0o-Xzr"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="2rr-eX-CbJ">
+                        <rect key="frame" x="-2" y="124" width="479" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="奎哥小改了一下，嘎嘎嘎!（谢谢使用）" usesSingleLineMode="YES" id="8QX-2C-FES">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Da-kj-6hv">
+                        <rect key="frame" x="-2" y="92" width="479" height="32"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="可用于MJEstion、YYModel、JsonModel" id="qKB-cQ-hQI">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kcy-UJ-T8e" firstAttribute="leading" secondItem="xTo-NY-de8" secondAttribute="leading" id="3kU-cG-M6F"/>
+                    <constraint firstItem="Kcy-UJ-T8e" firstAttribute="top" secondItem="xTo-NY-de8" secondAttribute="bottom" constant="15" id="5yF-5x-qxe"/>
+                    <constraint firstItem="7Da-kj-6hv" firstAttribute="top" secondItem="2rr-eX-CbJ" secondAttribute="bottom" id="8Ih-Gh-02g"/>
+                    <constraint firstItem="2rr-eX-CbJ" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="APM-7V-1tJ"/>
+                    <constraint firstItem="FIE-dA-b1R" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="50" id="EN1-5i-dyR"/>
+                    <constraint firstItem="xTo-NY-de8" firstAttribute="top" secondItem="FIE-dA-b1R" secondAttribute="bottom" constant="15" id="NlS-iG-40P"/>
+                    <constraint firstItem="7Da-kj-6hv" firstAttribute="top" secondItem="2rr-eX-CbJ" secondAttribute="bottom" id="TTp-XJ-40X"/>
+                    <constraint firstItem="2rr-eX-CbJ" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="WC4-nM-LlD"/>
+                    <constraint firstAttribute="trailing" secondItem="2rr-eX-CbJ" secondAttribute="trailing" id="XjW-c7-eFo"/>
+                    <constraint firstItem="FIE-dA-b1R" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="49" id="bVm-AW-uWW"/>
+                    <constraint firstAttribute="trailing" secondItem="7Da-kj-6hv" secondAttribute="trailing" id="dYh-cW-dCt"/>
+                    <constraint firstItem="7Da-kj-6hv" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="iet-Ui-iUf"/>
+                    <constraint firstItem="Kcy-UJ-T8e" firstAttribute="leading" secondItem="FIE-dA-b1R" secondAttribute="leading" id="xaQ-Lt-hOh"/>
+                    <constraint firstItem="FIE-dA-b1R" firstAttribute="top" secondItem="7Da-kj-6hv" secondAttribute="bottom" id="ymO-px-XcS"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="102" y="206"/>
+        </window>
+    </objects>
+</document>
